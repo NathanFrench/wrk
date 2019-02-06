@@ -36,6 +36,10 @@ function onStats(elapsed, time, status)
         time = 0.0
     end
 
+    if status == nil then
+        status = 555
+    end
+
     if status >= 200 and status < 300 then
         successReponseTime = string.format('%.5f', time)
     else
